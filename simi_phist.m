@@ -9,7 +9,6 @@ function [ rate ] = simi_phist( image1, image2, n, opt )
 % g: gray mode.
 % o: cosine similarity, default.
 % c: corr2.
-% n: no figure.
 
 %% init
 if(3 == nargin)

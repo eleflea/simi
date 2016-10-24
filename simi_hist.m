@@ -70,7 +70,7 @@ if(strfind(opt, 'g'))
     end
     
     % show histogram or not
-    if(~strfind(opt, 'n'))
+    if(isempty(strfind(opt, 'n')))
         figure;
         subplot(1,2,1),imhist(t1(:,:,1));
         subplot(1,2,2),imhist(t2(:,:,1));
@@ -110,7 +110,7 @@ else
     end
     
     % show histogram or not
-    if(~strfind(opt, 'n'))
+    if(isempty(strfind(opt, 'n')))
         figure;
         subplot(1,2,1),imhist(t1(:,:,1)),hold on,imhist(t1(:,:,2)),imhist(t1(:,:,3)),hold off;
         subplot(1,2,2),imhist(t2(:,:,1)),hold on,imhist(t2(:,:,2)),imhist(t2(:,:,3)),hold off;
@@ -142,7 +142,7 @@ else
 end
 
 %% show images or not
-if(~strfind(opt, 'n'))
+if(isempty(strfind(opt, 'n')))
     figure;
     imshow(uint8([t1,t2]));
 end

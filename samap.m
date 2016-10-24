@@ -3,7 +3,7 @@ function [ map_data ] = samap( image )
 % Use:
 % map_data = samap('path\to\image')
 % map_data = samap(image_data)
-% return map data (double) of image.
+% return map data (uint8) of image.
 
 %% Read image from file
 if(isequal(class(image),'char'))
@@ -22,7 +22,7 @@ saliencyMap = abs(ifft2(exp(mySpectralResidual + 1i*myPhase))).^2;
 
 %% After Effect
 saliencyMap = mat2gray(imfilter(saliencyMap, fspecial('gaussian', [10, 10], 2.5)));
-imshow(saliencyMap);
+%imshow(saliencyMap);
 map_data = uint8(round(saliencyMap.*255));
 
 end

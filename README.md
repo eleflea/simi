@@ -43,7 +43,7 @@ rate = simi_hist(image1_data,image2_data[,opt])
 
 #### 描述
 
-基于[simi_hist]，把图片分为n*n个小份分别用[simi_hist]比较，结果取平均值。返回双精度结果（0~1）越接近于1图片越相似。
+基于[simi_hist]，把图片分为n*n个小份，分别用[simi_hist]比较，结果取平均值。返回双精度结果（0~1）越接近于1图片越相似。
 依赖[splitter]。
 
 #### 用法
@@ -59,7 +59,6 @@ rate = simi_phist(image1_data,image2_data,pieces[,opt])
 + g: 灰度模式。
 + o: 计算[余弦相似度]，默认。
 + c: [corr2]函数。
-+ n: 无图模式。
 
 ### [simi_map]
 
@@ -77,8 +76,6 @@ rate = simi_phist(image1_data,image2_data,pieces[,opt])
 ##### pieces参数:
 每行每列分为pieces份。
 ##### opt参数：
-+ r: RGB 模式，默认。
-+ g: 灰度模式。
 + o: 计算[余弦相似度]，默认。
 + c: [corr2]函数。
 + n: 无图模式。
